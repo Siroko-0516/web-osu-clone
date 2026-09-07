@@ -1,5 +1,7 @@
 # Web osu! clone
 
+[Play the latest browser build](https://siroko-0516.github.io/web-osu-clone/)
+
 An unofficial, open-source browser rhythm game experiment inspired by circle-clicking rhythm games.
 
 ## Play locally
