@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#17131f">
+  <meta name="description" content="An unofficial open-source browser rhythm game inspired by circle-clicking rhythm games.">
+  <title>Web osu! clone — unofficial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" aria-label="Rhythm game playfield"></canvas>
+
+    <section id="menu" class="panel">
+      <div class="brand" aria-label="Web osu clone">
+        <span>web</span>
+        <strong>rhythm!</strong>
+      </div>
+      <h1>Web osu! clone</h1>
+      <p class="subtitle">Unofficial browser rhythm-game experiment</p>
+      <div class="difficulty" aria-label="Difficulty">
+        <button class="diff active" data-diff="normal">Normal</button>
+        <button class="diff" data-diff="hard">Hard</button>
+        <button class="diff" data-diff="insane">Insane</button>
+      </div>
+      <button id="play" class="primary">Play demo</button>
+      <p class="controls">Move with your mouse or finger · Hit with Z / X / click / tap</p>
+      <details>
+        <summary>Project notice</summary>
+        <p>This is an unofficial fan-made project and is not affiliated with or endorsed by ppy Pty Ltd. It contains no official songs, beatmaps, logos, or artwork.</p>
+      </details>
+    </section>
+
+    <section id="hud" class="hidden" aria-live="polite">
+      <div class="health"><i id="healthBar"></i></div>
+      <div class="scoreblock"><strong id="score">00000000</strong><span id="accuracy">100.00%</span></div>
+      <div class="comboblock"><strong id="combo">0x</strong></div>
+      <button id="pause" aria-label="Pause game">Ⅱ</button>
+    </section>
+
+    <section id="pauseMenu" class="panel hidden">
+      <h2>Paused</h2>
+      <button id="resume" class="primary">Continue</button>
+      <button id="retry">Retry</button>
+      <button class="quit">Back to menu</button>
+    </section>
+
+    <section id="results" class="panel hidden">
+      <p class="eyebrow">RESULTS</p>
+      <div id="grade" class="grade">A</div>
+      <h2 id="resultScore">00000000</h2>
+      <p id="resultAccuracy">Accuracy 100.00%</p>
+      <div class="judgements">
+        <span><b class="j300">300</b><i id="count300">0</i></span>
+        <span><b class="j100">100</b><i id="count100">0</i></span>
+        <span><b class="j50">50</b><i id="count50">0</i></span>
+        <span><b class="jmiss">MISS</b><i id="countMiss">0</i></span>
+      </div>
+      <button id="again" class="primary">Play again</button>
+      <button class="quit">Back to menu</button>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
